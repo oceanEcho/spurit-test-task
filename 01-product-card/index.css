@@ -1,1 +1,127 @@
-/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.heading {
+  font-family: Arial;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000000;
+}
+
+.product-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-list__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 380px;
+  height: 482px;
+  box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card__info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card__heading {
+  margin: 0;
+  font-family: Arial;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #2f2f2f;
+  margin-bottom: 16px;
+}
+
+.card__description {
+  margin: 0;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #2f2f2f;
+  flex-grow: 1;
+}
+
+.button {
+  cursor: pointer;
+  height: 48px;
+  width: 100%;
+  background: #ffffff;
+  color: #42940f;
+  border: 2px solid #42940f;
+  border-radius: 8px;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  text-align: center;
+  transition: color 0.3s, background 0.3s, border 0.3s;
+}
+
+.button:hover {
+  background: #42940f;
+  color: #ffffff;
+}
+
+.button:active {
+  background: #1f5200;
+  border: 2px solid #1f5200;
+  color: #ffffff;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  background: #4e4e4e;
+  border: 2px solid #4e4e4e;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 575.98px) {
+  .heading {
+    font-size: 32px;
+  }
+
+  .product-list {
+    flex-direction: column;
+  }
+}
