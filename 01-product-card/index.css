@@ -1,3 +1,28 @@
+:root {
+  --bg-color-primary: #ffffff;
+
+  --text-color-primary: #000000;
+  --text-color-secondary: #2f2f2f;
+
+  --button-text-color: #42940f;
+  --button-text-color-hover: #ffffff;
+  --button-text-color-active: #ffffff;
+  --button-text-color-disabled: #ffffff;
+
+  --button-border-color: #42940f;
+  --button-border-color-hover: #42940f;
+  --button-border-color-active: #1f5200;
+  --button-border-color-disabled: #4e4e4e;
+
+  --button-bg-color: #ffffff;
+  --button-bg-color-hover: #42940f;
+  --button-bg-color-active: #1f5200;
+  --button-bg-color-disabled: #4e4e4e;
+
+  --tag-bg-color-new: #fdcff3;
+  --tag-bg-color-low-stock: #ffcf56;
+}
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -24,7 +49,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0em;
   text-align: center;
-  color: #000000;
+  color: var(--text-color-primary);
   margin: 40px 0;
 }
 
@@ -73,7 +98,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0em;
   text-align: left;
-  color: #2f2f2f;
+  color: var(--text-color-secondary);
   margin-bottom: 16px;
 }
 
@@ -85,7 +110,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0em;
   text-align: left;
-  color: #2f2f2f;
+  color: var(--text-color-secondary);
   flex-grow: 1;
 }
 
@@ -105,7 +130,7 @@ body {
   list-style: none;
   padding: 0 16px;
   border-radius: 8px;
-  background-color: #ffffff;
+  background: var(--bg-color-primary);
   font-family: Arial;
   font-size: 16px;
   font-weight: 400;
@@ -115,20 +140,20 @@ body {
 }
 
 .tag_type_new {
-  background-color: #fdcff3;
+  background: var(--tag-bg-color-new);
 }
 
 .tag_type_low-stock {
-  background-color: #ffcf56;
+  background: var(--tag-bg-color-low-stock);
 }
 
 .button {
   cursor: pointer;
   height: 48px;
   width: 100%;
-  background: #ffffff;
-  color: #42940f;
-  border: 2px solid #42940f;
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: 2px solid var(--button-border-color);
   border-radius: 8px;
   font-family: Arial;
   font-size: 18px;
@@ -140,21 +165,22 @@ body {
 }
 
 .button:hover {
-  background: #42940f;
-  color: #ffffff;
+  background: var(--button-bg-color-hover);
+  color: var(--button-text-color-hover);
+  border: 2px solid var(--button-border-color-hover);
 }
 
 .button:active {
-  background: #1f5200;
-  border: 2px solid #1f5200;
-  color: #ffffff;
+  background: var(--button-bg-color-active);
+  color: var(--button-text-color-active);
+  border: 2px solid var(--button-border-color-active);
 }
 
 .button:disabled {
   cursor: not-allowed;
-  background: #4e4e4e;
-  border: 2px solid #4e4e4e;
-  color: #ffffff;
+  background: var(--button-bg-color-disabled);
+  color: var(--button-text-color-disabled);
+  border: 2px solid var(--button-border-color-disabled);
 }
 
 @media screen and (max-width: 1200px) {
