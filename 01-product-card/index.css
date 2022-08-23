@@ -55,6 +55,7 @@ body {
   box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
   border-radius: 12px;
   overflow: hidden;
+  position: relative;
 }
 
 .card__info {
@@ -86,6 +87,39 @@ body {
   text-align: left;
   color: #2f2f2f;
   flex-grow: 1;
+}
+
+.tag-list {
+  list-style: none;
+  margin: 0;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  gap: 16px;
+}
+
+.tag {
+  list-style: none;
+  padding: 0 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.tag_type_new {
+  background-color: #fdcff3;
+}
+
+.tag_type_low-stock {
+  background-color: #ffcf56;
 }
 
 .button {
@@ -161,5 +195,14 @@ body {
   .card__image {
     width: 320px;
     height: 192px;
+  }
+
+  .tag-list {
+    gap: 12px;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 0 12px;
   }
 }
