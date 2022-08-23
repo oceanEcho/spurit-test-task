@@ -21,6 +21,11 @@
 
   --tag-bg-color-new: #fdcff3;
   --tag-bg-color-low-stock: #ffcf56;
+
+  --gutter-s: 12px;
+  --gutter-m: 16px;
+  --gutter-l: 20px;
+  --gutter-xl: 40px;
 }
 
 html {
@@ -50,7 +55,7 @@ body {
   letter-spacing: 0em;
   text-align: center;
   color: var(--text-color-primary);
-  margin: 40px 0;
+  margin: var(--gutter-xl) 0;
 }
 
 .product-list {
@@ -60,7 +65,7 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: var(--gutter-l);
 }
 
 .product-list__item {
@@ -99,7 +104,7 @@ body {
   letter-spacing: 0em;
   text-align: left;
   color: var(--text-color-secondary);
-  margin-bottom: 16px;
+  margin-bottom: var(--gutter-m);
 }
 
 .card__description {
@@ -117,18 +122,18 @@ body {
 .tag-list {
   list-style: none;
   margin: 0;
-  padding: 16px;
+  padding: var(--gutter-m);
   display: flex;
   flex-wrap: wrap;
   position: absolute;
   top: 0;
   left: 0;
-  gap: 16px;
+  gap: var(--gutter-m);
 }
 
 .tag {
   list-style: none;
-  padding: 0 16px;
+  padding: 0 var(--gutter-m);
   border-radius: 8px;
   background: var(--bg-color-primary);
   font-family: Arial;
@@ -199,9 +204,13 @@ body {
 }
 
 @media screen and (max-width: 490px) {
+  :root {
+    --gutter-m: 12px;
+    --gutter-xl: 24px;
+  }
+
   .heading {
     font-size: 32px;
-    margin: 24px 0;
   }
 
   .card {
@@ -211,7 +220,6 @@ body {
 
   .card__heading {
     font-size: 18px;
-    margin-bottom: 12px;
   }
 
   .card__description {
@@ -223,12 +231,7 @@ body {
     height: 192px;
   }
 
-  .tag-list {
-    gap: 12px;
-  }
-
   .tag {
     font-size: 12px;
-    padding: 0 12px;
   }
 }
